@@ -108,24 +108,30 @@ footer {
 @media (min-width: 600px) {
   #map { height: 500px; }
 }
+
 .slider {
   position: relative;
   max-width: 800px;
+  height: 400px;
   margin: 2rem auto;
   overflow: hidden;
   border-radius: 8px;
 }
+
 .slider img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+
 .slider img.visible {
   opacity: 1;
 }
-
 
 @media (min-width: 1024px) {
   #map { height: 600px; }
