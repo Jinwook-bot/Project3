@@ -74,8 +74,28 @@ nav a {
   margin: 0 auto 2rem;
 }
 
+.slider {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider img.visible {
+  opacity: 1;
+}
+
 .map-section {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto 2rem;
   padding: 1rem;
   background-color: #fff;
@@ -104,14 +124,31 @@ footer {
   background-color: #eee;
 }
 
-/* Responsive adjustments */
 @media (min-width: 600px) {
+  nav ul {
+    gap: 3rem;
+  }
+  .hero {
+    padding: 3rem 2rem;
+  }
+  .img-wrapper, .text-box, .video-wrapper, .slider, .map-section {
+    max-width: 600px;
+  }
   .map-section #map {
     height: 500px;
   }
 }
 
 @media (min-width: 1024px) {
+  nav ul {
+    gap: 4rem;
+  }
+  section, .slider, .map-section {
+    padding: 3rem 2rem;
+  }
+  .slider {
+    max-width: 1000px;
+  }
   .map-section #map {
     height: 600px;
   }
