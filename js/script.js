@@ -1,1 +1,37 @@
-ss
+function initMap() {
+  const mapCenter = { lat: 37.5665, lng: 126.9780 };
+  const map = new google.maps.Map(
+    document.getElementById('map'),
+    { center: mapCenter, zoom: 12 }
+  );
+
+  const marker1 = new google.maps.Marker({
+    position: { lat: 37.5663, lng: 126.9779 },
+    map,
+    title: 'Seoul City Hall'
+  });
+  const info1 = new google.maps.InfoWindow({
+    content: '<strong>Seoul City Hall</strong><br>City Hall Building'
+  });
+  marker1.addListener('click', () => info1.open(map, marker1));
+
+  const marker2 = new google.maps.Marker({
+    position: { lat: 37.5796, lng: 126.9770 },
+    map,
+    title: 'Gyeongbokgung Palace'
+  });
+  const info2 = new google.maps.InfoWindow({
+    content: '<strong>Gyeongbokgung Palace</strong><br>Historic Royal Palace'
+  });
+  marker2.addListener('click', () => info2.open(map, marker2));
+
+  const marker3 = new google.maps.Marker({
+    position: { lat: 37.5512, lng: 126.9882 },
+    map,
+    title: 'Namsan Seoul Tower'
+  });
+  const info3 = new google.maps.InfoWindow({
+    content: '<strong>Namsan Seoul Tower</strong><br>Observation Tower'
+  });
+  marker3.addListener('click', () => info3.open(map, marker3));
+}
