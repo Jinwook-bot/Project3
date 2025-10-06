@@ -95,7 +95,6 @@ nav a {
 }
 
 .map-section {
-  max-width: 800px;
   margin: 0 auto 2rem;
   padding: 1rem;
   background-color: #fff;
@@ -131,7 +130,10 @@ footer {
   .hero {
     padding: 3rem 2rem;
   }
-  .img-wrapper, .text-box, .video-wrapper, .slider, .map-section {
+  .img-wrapper,
+  .text-box,
+  .video-wrapper,
+  .slider {
     max-width: 600px;
   }
   .map-section #map {
@@ -143,7 +145,9 @@ footer {
   nav ul {
     gap: 4rem;
   }
-  section, .slider, .map-section {
+  section,
+  .slider,
+  .map-section {
     padding: 3rem 2rem;
   }
   .slider {
