@@ -35,3 +35,13 @@ function initMap() {
   });
   marker3.addListener('click', () => info3.open(map, marker3));
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slider img');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('visible');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('visible');
+  }, 3000);
+});
+
